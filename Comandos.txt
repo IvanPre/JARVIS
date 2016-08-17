@@ -1,8 +1,1 @@
-abrir
-calcular
-criar
-desligar
-encerrar
-limpar
-pesquisar
-reiniciar
+abrir|abra|calcular|calcule|criar|crie|desligar|desligue|encerrar|encerre|limpar|limpe|pesquisar|pesquise|reiniciar|reinicie|0
