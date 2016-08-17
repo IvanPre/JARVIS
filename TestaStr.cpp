@@ -10,7 +10,7 @@ char* testacomando(char txt[512], char comando[512])
 {
 	FILE *file;
 	if((file=fopen(txt,"r"))==NULL)
-		printf("Arquivo não encontrado");
+		printf("Arquivo nÃ£o encontrado");
 	else
 	{
 		char comandos[1024], *cmndteste = (char *) malloc (1024);
@@ -31,21 +31,17 @@ char* testacomando(char txt[512], char comando[512])
 			char perg[1024];
 			strcpy(perg,cmndteste);
 			strcat(perg, "? (s/n)*");
-			printf("\n\n                *Você quis dizer ");
+			printf("\n\n                *VocÃª quis dizer ");
 			puts(perg);
 			char resp;
-			do
+			scanf("%c",&resp);
+			if(resp=='s')//retorna o comando
+				return cmndteste;
+			else
 			{
-				scanf("%c",&resp);
-				if(resp=='s')//retorna o comando
-					return cmndteste;
-				else
-					if(resp=='n')
-					{
-						printf("*Ok*\n");
-						return '\0';
-					}
-			}while(resp!='s' && resp!='n');
+				printf("*Ok*\n");
+				return '\0';
+			}
 		}
 	}
 }
